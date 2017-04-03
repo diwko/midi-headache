@@ -207,6 +207,12 @@ not_mapped_instruments = {3, 10, 11, 12, 17, 18, 20, 22, 31, 39,
                           119, 121, 123, 124, 126, 127}
 
 
+def file_type(string):
+    if not str.endswith(string, '.midi'):
+        string += '.midi'
+    return string
+
+
 def tempo_type(string):
     tempo = int(string)
     if tempo < 50 or tempo > 500:
@@ -268,7 +274,7 @@ parser = ArgumentParser(
 
 parser.add_argument(
     'file_name',
-    type=str,
+    type=file_type,
     help='output midi file')
 
 parser.add_argument(
