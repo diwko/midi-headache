@@ -1,6 +1,11 @@
 from melody_parts import Note, Bar, Pattern
 from random import randint
 
+note_basic = (0, 2, 4, 5, 7, 9, 11)
+
+chord_basic = ((0, 4, 7), (2, 5, 9), (4, 7, 11),
+                (5, 9, 12), (7, 11, 15), (9, 12, 16))
+
 
 def generate_drum_bar(pitch, period, volume=127):
     bar = Bar()
@@ -18,11 +23,8 @@ def generate_drum_pattern(bars_number, pitch, period, volume=127):
 
 
 def generate_chord_notes(octave=5, chord_number=0, duration=1, volume=127):
-    chord_basics = ((0, 4, 7), (2, 5, 9), (4, 7, 11),
-                    (5, 9, 12), (7, 11, 15), (9, 12, 16))
-
     notes = []
-    for basic_pitch in chord_basics[chord_number]:
+    for basic_pitch in chord_basic[chord_number]:
         note = Note(duration, octave*12 + basic_pitch, volume)
         notes.append(note)
     return notes
@@ -51,7 +53,6 @@ def generate_chord_pattern(bars_number=4, octave=5, note_duration=1,
 
 def generate_notes(duration=16, octave=5, note_durations=(1, 2, 4, 8, 16),
                    note_chance=0.8, volume=127):
-    note_basic = (0, 2, 4, 5, 7, 9, 11)
     notes = []
     beat = 0
     pitch = octave * 12
