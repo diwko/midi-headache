@@ -15,17 +15,17 @@ def main():
     melody.add_instrument(args.main)
     melody.add_instrument_pattern(
         generate_pattern(
-            args.bars, randint(4, 6), (1, 2, 4, 8), randint(1, 10)/10.0, 127))
+            args.bars, randint(3, 6), (1, 2, 4, 8), randint(1, 10)/10.0, 127))
 
     melody.add_instrument(args.chords)
     melody.add_instrument_pattern(
         generate_chord_pattern(
-            args.bars, randint(4, 6), 2**randint(2, 3), 80))
+            args.bars, randint(3, 6), 2**randint(2, 3), 80))
 
     melody.add_instrument(args.extra)
     melody.add_instrument_pattern(
         generate_pattern(
-            args.bars, randint(4, 6), (1, 2, 4, 8), randint(1, 10)/10.0, 100))
+            args.bars, randint(3, 6), (1, 2, 4, 8), randint(1, 10)/10.0, 100))
 
     melody.save_melody()
 
