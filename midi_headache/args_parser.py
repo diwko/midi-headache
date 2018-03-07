@@ -215,7 +215,7 @@ def file_type(string):
 
 def tempo_type(string):
     tempo = int(string)
-    if tempo < 50 or tempo > 500:
+    if tempo < 50 or tempo > 1000:
         raise ArgumentTypeError("Tempo has to be between 50 and 500")
     return tempo
 

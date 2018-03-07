@@ -1,8 +1,8 @@
-from melody_creator import MelodyCreator
-from melody_parts_generator import generate_drum_pattern,\
+from midi_headache.melody_creator import MelodyCreator
+from midi_headache.melody_parts_generator import generate_drum_pattern,\
     generate_chord_pattern, generate_pattern
 from random import randint
-from args_parser import parser
+from midi_headache.args_parser import parser
 
 
 def main():

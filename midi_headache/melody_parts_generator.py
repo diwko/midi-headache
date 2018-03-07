@@ -1,4 +1,4 @@
-from melody_parts import Note, Bar, Pattern
+from midi_headache.melody_parts import Note, Bar, Pattern
 from random import randint
 
 note_basic = (0, 2, 4, 5, 7, 9, 11)
